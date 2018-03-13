@@ -8,7 +8,7 @@ module.exports = function count(s, pairs) {
   };
 
   for (let i of pairs) sum *= Math.pow(i[0], i[1]);
-  if (!isFinite(sum) || sum > 1000000) return 0;
+  if (!isFinite(sum) || sum > 10000000) return 0;
   for (let i = 0; i < sum; i++){
     for (let j = 0; j < s.length; j++){
       tempGCD = gcd(i+j, sum);
